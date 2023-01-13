@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            margin-bottom: 5px;
+        }
+        .leftBlock{
+            flex-direction: column;
+            width: 15em;
+            background-color: darkgray;
+        }
+        .rightBlock{
+            flex-direction: column;         
+        }
+        .rightBlock1{
+            flex-direction: column;
+            background-color: rgb(200, 200, 200);
+            margin-bottom: 2em;           
+        }
+        .footer{
+            background-color: rgb(206, 206, 206);
+        }
+        img{
+            display: flex;
+            width: 10%;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: rgb(230, 230, 230);">
+        <div class="leftBlock">
+            <span style="font-weight: bold;">Блок навигации</span>
+            <ul>
+                <li>Ширина 15em</li>
+                <li>Должен присутствоват цвет фона</li>
+                <li>Располагается слева</li>
+                <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+            </ul>
+        </div>
+        <div class="rightBlock">
+            <div class="rightBlock1">
+                <span style="font-weight: bold;">Статья 1</span><br>
+                Размер блока:
+                Занимает всю доступную ширину
+                Должен присутствовать цвет фона
+                Во всех статьях сделайте отсутп снизу от соседей равным .2em, при помощи свойства margin-bottom
+            </div>
+            <div class="rightBlock1">
+                <span style="font-weight: bold;">Статья 2</span><br>
+                Размер блока:
+                Занимает всю доступную ширину
+                Должен присутствовать цвет фона
+                Во всех статьях сделайте отсутп снизу от соседей равным .2em, при помощи свойства margin-bottom
+                <img src="icon_mail.png" alt="icon">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Нижний блок, подвал.
+    </div>
+    
+</body>
+</html>

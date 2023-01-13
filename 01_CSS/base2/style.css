@@ -1,0 +1,10 @@
+header{
+    text-align: right;
+}
+h3{
+    text-decoration: underline;
+}
+h3,p.letter{
+    text-indent: 30px;
+    font-family: 'Bad Script', cursive;
+}

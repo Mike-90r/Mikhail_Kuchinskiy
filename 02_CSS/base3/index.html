@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .leftBlock{
+            width: 15em;
+            float: left;
+            background-color: darkgray;
+        }
+        .rightBlock{
+            background-color: rgb(200, 200, 200);
+            margin-bottom: 2em;
+            margin-left: 15em;
+            white-space: pre;           
+        }
+        .footer{
+            background-color: rgb(206, 206, 206);
+            clear: both;
+        }
+        img{
+            float: right;
+        }
+        .clear{
+            clear: right;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: rgb(230, 230, 230);">
+        <div class="leftBlock">
+            <span style="font-weight: bold;">Блок навигации</span>
+            <ul>
+                <li>Ширина 15em</li>
+                <li>Должен присутствоват цвет фона</li>
+                <li>Располагается слева</li>
+                <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+            </ul>
+        </div>
+        <div class="rightBlock">
+            <span style="font-weight: bold;">Статья 1</span>
+
+            Размер блока:
+            Занимает всю доступную ширину
+            Должен присутствовать цвет фона
+            Во всех статьях сделайте отсутп снизу от соседей равным .2em, при помощи свойства margin-bottom
+        </div>
+        <div class="rightBlock">
+            <span style="font-weight: bold;">Статья 2</span>
+            
+            Размер блока:
+            Занимает всю доступную ширину
+            Должен присутствовать цвет фона
+            Во всех статьях сделайте отсутп снизу от соседей равным .2em, при помощи свойства margin-bottom
+            <img src="icon_mail.png" alt="icon">
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer">
+        Нижний блок, подвал.
+    </div>
+</body>
+</html>
