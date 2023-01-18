@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 350px;
+        }
+        input{
+            margin: 2px;
+        }
+        [type="submit"]{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Проверка пароля</h1>
+    <fieldset>
+        <label><input type="text" id="pass">*Пароль</label><br>
+        <label><input type="text" id="repPass">*Повторите пароль</label>
+        <input type="submit" value="Отправить">
+    </fieldset>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+    <script>
+        $('document').ready(function(){
+            $('[type="text"]').keyup(function(){
+                var pass=$('#pass').val();
+                var pass_rep=$('#repPass').val();
+
+                if (pass!=pass_rep){
+                    $('[type="text"]').css('backgroundColor', 'red');
+                }
+                else{
+                    $('[type="text"]').css('backgroundColor', 'green');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

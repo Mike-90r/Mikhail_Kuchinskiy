@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        caption{
+            caption-side: bottom;
+            text-transform: uppercase;
+        }
+        td{
+            border-bottom: 1px dotted gray;
+            border-left: 1px dotted gray;
+        }
+        th{
+            background: gray;
+        }
+        tr td:nth-child(1){
+            border-left: none;
+        }
+        button{
+            background-color: blue;
+            border-radius: 5px;
+            border: solid 1px gray;
+            height: 25px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Данные о сотрудниках</caption>
+        <tr>
+            <th>ФИО</th>
+            <th>пол</th>
+            <th>должность</th>
+            <th>дата рож.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr>
+            <td>Иванов Иван Иванович</td>
+            <td>М</td>
+            <td>начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr>
+            <td>Петрова Иллона Петровна</td>
+            <td>Ж</td>
+            <td>секретарь</td>
+            <td>01.01.1989</td>
+            <td>98795</td>
+            <td>46523</td>
+        </tr>
+        <tr>
+            <td>Сидоров Илья Игоревич</td>
+            <td>М</td>
+            <td>Бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr class="5">
+            <td>Купин Федор Федорович</td>
+            <td>М</td>
+            <td>Бухгалтер</td>
+            <td>01.01.1963</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr class="6">
+            <td>Крупин Сергей Иванович</td>
+            <td>М</td>
+            <td>водитель</td>
+            <td>01.01.1983</td>
+            <td>3234567</td>
+            <td>3233453</td>
+        </tr>
+    </table>
+    <button>Нет скрытых строк</button>
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function($){
+            $(".6").click(function(){
+                $(".6").slideUp('slow', function(){
+                    $("button").html("Показать все строки");
+                });
+            });
+            $(".5").click(function(){
+                $(".5").slideUp('slow', function(){
+                    $("button").html("Показать все строки");
+                });
+            });
+            $("tr:nth-child(4)").click(function(){
+                $("tr:nth-child(4)").slideUp('slow', function(){
+                    $("button").html("Показать все строки");
+                });
+            });
+            $("tr:nth-child(3)").click(function(){
+                $("tr:nth-child(3)").slideUp('slow', function(){
+                    $("button").html("Показать все строки");
+                });
+            });
+            $("tr:nth-child(2)").click(function(){
+                $("tr:nth-child(2)").slideUp('slow', function(){
+                    $("button").html("Показать все строки");
+                });
+            });
+            $("button").click(function(){
+                $("tr").slideDown('slow', function(){
+                    $("button").html("Нет скрытых строк");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
